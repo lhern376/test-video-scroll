@@ -7,7 +7,7 @@ const registerVideo = (bound, video) => {
         window.scrollY + bound.getBoundingClientRect().top;
       const rawPercentScrolled =
         (window.scrollY - distanceFromTop) /
-        (bound.scrollHeight - window.innerHeight);
+        (bound.scrollHeight + window.innerHeight);
       const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
 
       video.currentTime = video.duration * percentScrolled;
